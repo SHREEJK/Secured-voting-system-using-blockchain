@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/admin.css') }}">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,100;0,300;0,400;0,700;0,900;1,100;1,300;1,400;1,700;1,900&display=swap" rel="stylesheet">
+
+</head>
+<body>
+    <div class="main">
+        <h1>Admin Panel</h1>
+        <div class="container">
+            <div class="left">
+                <h3>Result Details</h3>
+                <table>
+                    <thead>
+                        <tr>
+                            <th>Voter ID</th>
+                            <th>Party Name</th>
+                            <th>Voted Time</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        {% for post in posts %}
+                            <tr>
+                                <td>{{ post.voter_id }}</td>
+                                <td>{{ post.party }}</td>
+                                <td>{{ readable_time(post.timestamp) }}</td>
+                            </tr>
+                        {% endfor %}
+                    </tbody>
+                </table>
+            </div>
+            <div class="right">
+                <h3>Result Summary</h3>
+                <table>
+                    <thead>
+                        <tr>
+                            <th>Party Name</th>
+                            <th>Total Votes</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        {% for p in political_parties %}
+                            <tr>
+                                <td>{{p}}</td>
+			                    <td>{{vote_gain.count(p)}}</td>
+                            </tr>
+                        {% endfor %}
+                    </tbody>
+                </table>
+            </div>
+        </div>
+    </div>
+</body>
+</html>

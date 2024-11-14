@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/home.css') }}">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,100;0,300;0,400;0,700;0,900;1,100;1,300;1,400;1,700;1,900&display=swap" rel="stylesheet">
+
+</head>
+<body>
+    <section class="main">
+        <div class="head">
+            <h1 class="head1">Welcome to the Voting Portal</h1>
+        </div>
+        <div class="content">
+            <div class="left">
+                <form action="/submit" method="post">
+                    <h3 class="form-head">Every Vote Counts, Make Yours</h3>
+                    <input type="text" placeholder="Enter Your Voter ID" name="voter_id">
+                    <input type="text" placeholder="Enter your party ID" name="party">
+                    <button type="submit">Cast Vote</button>
+                </form>
+            </div>
+            <div class="right">
+                <div class="plist">
+                    <table>
+                        <thead>
+                            <tr>
+                                <th>Party Name</th>
+                                <th>Party ID</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            {% for name, party_id in parties %}
+                                <tr>
+                                    <td>{{ name }}</td>
+                                    <td>{{ party_id }}</td>
+                                </tr>
+                                {% endfor %}
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+        </div>
+        <div class="message">
+            {% if message %}
+                {% if error %}
+                    <p class="status" style="color: red;">{{ message }}</p>
+                {% else %}
+                <p class="status" style="color: rgb(128, 233, 128);">{{ message }}</p>
+                {% endif %}
+            {% endif %}
+        </div>
+</body>
+</html>

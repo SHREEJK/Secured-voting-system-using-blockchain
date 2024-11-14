@@ -1,0 +1,90 @@
+*{
+    margin: 0px;
+    padding: 0px;
+    box-sizing: border-box;
+    font-family: "Lato", sans-serif;
+}
+
+
+.main{
+    background-image: url(index_bg.png);
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    height: 100vh;
+    overflow: hidden;
+    display: flex;
+    flex-direction: column;
+    padding: 0px 3% 0px 3%;
+}
+
+.head{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    margin-top: 20px;
+}
+
+.head h1{
+    font-size: 48px;
+    color: #a8f2fe;
+    text-align: center;
+}
+.head h2{
+    font-size: 30px;
+    color: #ffffff;
+    text-align: center;
+}
+
+
+.content{
+    margin-top: 40px;
+    display: flex;
+}
+.left{
+    width: 30%;
+}
+.right{
+    display: flex;
+    justify-content: center;
+    width: 70%;
+}
+
+form {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 100%;
+    margin-top: 30px;
+}
+
+form h3{
+    font-size: 40px;
+    color: #a8f2fe;
+    text-align: center;
+    margin-bottom: 25px;
+    font-weight: 900;
+}
+
+form input{
+    width: 70%;
+    margin-bottom: 20px;
+    padding: 12px;
+}
+
+form button{
+    font-size: 20px;
+    padding: 10px 60px;
+    border-radius: 16px;
+    border: 0px;
+    margin-top: 10px;
+    background-color: #a8f2fe;
+    color: #4d448b;
+}
+
+form button:hover{
+    background-color: #4d448b;
+    color: white;
+    cursor: pointer;
+}

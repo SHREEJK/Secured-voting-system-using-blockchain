@@ -1,0 +1,39 @@
+
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/index.css') }}">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,100;0,300;0,400;0,700;0,900;1,100;1,300;1,400;1,700;1,900&display=swap" rel="stylesheet">
+</head>
+<body>
+    <section class="main">
+        <div class="head">
+            <h1 class="head1">Take part in Secured Voting System</h1>
+            <h2 class="head2">" Right to vote " is as equal as "Right to Live"</h2>
+        </div>
+        <div class="content">
+            <div class="left">
+                <img src="{{ url_for('static', filename='images/overlay.png') }}" alt="" id="imgs">
+            </div>
+            <div class="right">
+                <form action="/" method="post">
+                    <h3 class="form-head">LOGIN TO VOTE</h3>
+                    <input type="text" placeholder="Enter Your Valid name" name="name">
+                    <input type="text" placeholder="Enter your unique App ID" name="id">
+                    {% if error %}
+                        <p style="color: red;">Invalid credentials</p>
+                    {% endif %}
+                    <button type="submit">Login</button>
+                </form>
+            </div>
+        </div>
+        
+    </section>
+</body>
+</html>
