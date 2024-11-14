@@ -1,6 +1,10 @@
 # Secured-voting-system-using-blockchain
 ![Voting System Screenshot](static/images/login.png)
 
+![Voting System Screenshot](static/images/vote.png)
+
+![Voting System Screenshot](static/images/admin.png)
+
 # Blockchain Voting System
 
 ### Summary
