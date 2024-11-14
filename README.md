@@ -34,5 +34,18 @@ A decentralized voting system built on a blockchain to ensure transparency, secu
 
 1. **Clone the repository** from GitHub:
    ```bash
-   git clone https://github.com/yourusername/blockchain-voting-system.git
+   git clone https://github.com/SHREEJK/Secured-voting-system-using-blockchain.git
+   
+2. **Install dependencies
+   ```bash
+   pip install -r requirements.txt
+   
+3. **Run the server 
+   ```bash
+   python startserver.py
+   
+4. **Run the application (use new terminal)
+   ```bash
+   python app.py
+   
 
